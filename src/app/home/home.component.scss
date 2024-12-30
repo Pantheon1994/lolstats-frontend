@@ -28,7 +28,7 @@ p {
 
 .form-search-bar {
     padding-top: 50px;
-    max-width: 500px;
+    max-width: 550px;
     border-radius: 5px;
     width: 100%;
     margin: auto;
@@ -87,6 +87,21 @@ select {
     width: 16px;
     height: 16px;
     animation: spin 1s linear infinite;
+}
+
+button {
+    color: white;
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+    background: rgb(0, 145, 255);
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+        cursor: pointer;
+        background: rgb(0, 94, 255);
+    }
 }
 
 /* Animation du spinner */

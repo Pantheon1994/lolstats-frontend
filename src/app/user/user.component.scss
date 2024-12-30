@@ -5,8 +5,6 @@
 .match-history {
     display: flex;
     flex-direction: column;
-    max-height: 600px;
-    overflow-y: scroll;
     padding-right: 20px;
 }
 
@@ -15,7 +13,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #30425b;
-    padding: 15px;
+    padding-bottom: 15px;
     margin-bottom: 20px;
     color: white;
 }
@@ -144,5 +142,18 @@ a {
         width: 64px;
         height: 64px;
         border-radius: 50%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .queue {
+        font-size: 12px;
+    }
+    .champion-icon {
+        img {
+            width: 54px;
+            height: 54px;
+        }
     }
 }

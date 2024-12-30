@@ -183,3 +183,19 @@
     background-attachment: fixed; /* Fixe l'image lors du défilement */
     z-index: -1; /* Assure que l'image reste derrière le contenu */
 }
+
+
+@media (max-width: 1080px) {
+    .container {
+        margin: 20px;
+    }
+    .match {
+        display: block;
+    }
+    .team {
+        margin: 0px;
+    }
+    .background {
+        display: none;
+    }
+}

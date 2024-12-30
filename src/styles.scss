@@ -121,7 +121,7 @@ p {
 }
 
 .result {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 4px;
@@ -134,3 +134,12 @@ p {
 .result.defeat {
     background-color: #dc3545; /* Rouge pour défaite */
 }
+
+@media (max-width: 1080px) {
+    .container {
+        width: inherit;
+        margin: 20px;
+    }
+}
+
+

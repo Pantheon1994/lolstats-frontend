@@ -7,12 +7,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
     z-index: 1000;
+    display: block;
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 1080px;
     margin: 0 auto;
 }
 
@@ -47,4 +46,11 @@
 
 .nav-links a:hover {
     color: #ff9900;
+}
+
+@media (max-width: 1080px) {
+    .navbar-container {
+        width: 100%;
+        text-align: center;
+    }
 }
