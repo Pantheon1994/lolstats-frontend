@@ -1,0 +1,148 @@
+.region {
+    color: #707070;
+}
+
+.match-history {
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+
+.match-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #30425b;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+}
+
+.url {
+    top: 0px;
+    position: absolute;
+    right: 0px;
+    a {
+        color: white;
+        font-size: 14Px;
+    }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #9bb0cc;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #30425b;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #30425b;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.average {
+    border-radius: 5px;
+    display: inline-flex;
+    background: #090c11;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    div {
+        padding: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        margin-left: 10px;
+        border-radius: 5px;
+        &.high {
+            background-color: #33ff00;
+            color: #135203;
+        }
+        &.good {
+            background-color: #ffee00;
+            color: #483917;
+        }
+        &.normal {
+            background-color: #b6b6b6;
+            color: #2b2b2b;
+        }
+        &.low {
+            background-color: #e25803;
+            color: #4e2003;
+        }
+        &.verylow {
+            background-color: #a50505;
+            color: #290101;
+        }
+    }
+}
+
+.level {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: black;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    div {
+        padding-top: 5px;
+    }
+}
+
+.queue {
+    width: 100%;
+    text-align: right;
+}
+
+a {
+    text-align: right;
+}
+
+.match-info {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.score {
+    width: 100%;
+    margin-left: 10px;
+    div {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+.champion-icon {
+    position: relative;
+    margin-left: 10px;
+    img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}

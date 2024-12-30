@@ -1,0 +1,100 @@
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.background {
+    position: absolute; /* Pour s'assurer qu'elle couvre tout l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url("/assets/home.png");
+    background-size: cover; /* Ajuste la taille de l'image pour qu'elle couvre toute la zone */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+    z-index: -1; /* Assure que l'image reste derrière le contenu */
+}
+
+p {
+    text-align: center;
+}
+
+.searchbar {
+    display: flex;
+    background: white;
+}
+
+.form-search-bar {
+    padding-top: 50px;
+    max-width: 500px;
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+}
+
+input {
+    border: none;
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px;
+
+    &:hover {
+        outline: none;
+        border: none;
+    }
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+select {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background: #0c1117;
+    color: white;
+    padding: 10px;
+    &:hover {
+        outline: none;
+        border: none;
+    }
+}
+
+.form-container {
+    display: flex;
+    flex: 1;
+}
+
+.form-control {
+    flex: 1;
+}
+
+.loader {
+    z-index: 1000;
+    font-size: 20px;
+    margin-top: 10Px;
+    color: #3498db; /* Couleur du texte */
+}
+
+/* Style pour le spinner (cercle qui tourne) */
+.spinner {
+    border: 4px solid #f3f3f3; /* Couleur de fond du spinner */
+    border-top: 4px solid #3498db; /* Couleur du spinner */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation du spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

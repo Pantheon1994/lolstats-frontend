@@ -1,0 +1,50 @@
+<div class="background"></div>
+<div class="container">
+    <div class="page">
+        <p>Recent Games (20 lasts)</p>
+        <h1>{{gameName}}#{{tagLine}} <span class="region">{{region}}</span></h1>
+    </div>
+
+    <div class="average" *ngIf="average > 0">
+        Average Carry Score <div
+            [ngClass]="getValueByScore(this.average)">{{this.average.toFixed(2)}}</div>
+    </div>
+    <div class="match-history">
+        <div class="match-card" *ngFor="let match of matchHistory$ | async ">
+            <div class="match-header">
+                <span class="result defeat"
+                    *ngIf="!match.isWinner">Defeat</span>
+                <span class="result victory"
+                    *ngIf="match.isWinner">Victory</span>
+            </div>
+            <div class="match-info">
+                <div class="role">
+                    <img
+                        [src]="'./assets/'  + match.currentPlayer?.position + '.png'"
+                        alt="Role Icon">
+                </div>
+                <div class="champion-icon">
+                    <img
+                        [src]="'./assets/champion/' + match.currentPlayer?.championName + '.png'"
+                        alt="Champion">
+                    <span class="level">
+                        <div>{{match.currentPlayer?.champLevel}}</div>
+                    </span>
+                </div>
+                <div class="score">
+                    <div>Carry Score</div>
+                    <app-progression-bar
+                        [carryScore]="match.currentPlayer?.score || 0"></app-progression-bar>
+                </div>
+                <div class="queue">
+                    <div>{{findQueue(match.queueId)?.description}}</div>
+                </div>
+                <div class="url">
+                    <a
+                        [routerLink]="['/match/' + match.matchId + '/' + match.currentPlayer?.puuid]">See
+                        Match</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

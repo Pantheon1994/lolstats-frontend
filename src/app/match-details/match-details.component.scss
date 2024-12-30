@@ -1,0 +1,185 @@
+.match {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.team {
+    flex-grow: 1;
+    margin-right: 30px;
+}
+
+.title {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.heroes {
+    margin-top: 10px;
+}
+
+.hero {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.role {
+    margin-right: 20px;
+}
+
+.info {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    background: #0c1117;
+    padding-top: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.progression-bar {
+    position: relative;
+    height: 30px;
+    padding: 3px;
+    border-radius: 3px;
+    width: 100%;
+    background: #0c1117;
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.25),
+        0 1px rgba(255, 255, 255, 0.08);
+}
+
+.result {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.progression {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    position: relative;
+    justify-content: flex-end;
+    font-size: 16px;
+    height: 100%;
+    font-family: "Halagar";
+    background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+    );
+    &.high {
+        background-color: #33ff00;
+        color: #135203;
+    }
+    &.good {
+        background-color: #ffee00;
+        color: #483917;
+    }
+    &.normal {
+        background-color: #b6b6b6;
+        color: #2b2b2b;
+    }
+    &.low {
+        background-color: #e25803;
+        color: #4e2003;
+    }
+    &.verylow {
+        background-color: #a50505;
+        color: #290101;
+    }
+
+    span {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+.name {
+    display: block;
+    font-size: 12px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 70px;
+    &.active {
+        color: rgb(0, 170, 255) !important;
+        font-weight: bold;
+    }
+}
+.avatar {
+    .image {
+        margin-top: 5px;
+        position: relative;
+        img {
+            border-radius: 100%;
+            border: 5px solid #090c11;
+            height: 64px;
+        }
+        .level {
+            position: absolute;
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            right: 0px;
+            bottom: 0px;
+            border-radius: 100%;
+            div {
+                color: white;
+                text-align: center;
+                padding-top: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.badge {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    color: white;
+    min-width: 50px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    &.looser {
+        background: #730909;
+        border: 1px solid red;
+    }
+    &.winner {
+        background: #0d7b0d;
+        border: 1px solid greenyellow;
+    }
+}
+
+.background {
+    background: url("/assets/background.png");
+    background-repeat: no-repeat;
+}
+
+.background {
+    position: absolute; /* Pour s'assurer qu'elle couvre tout l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url("/assets/background.png");
+    background-size: cover; /* Ajuste la taille de l'image pour qu'elle couvre toute la zone */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+    z-index: -1; /* Assure que l'image reste derrière le contenu */
+}

@@ -1,0 +1,7 @@
+<div class="progression-bar">
+    <div class="progression"
+        [ngClass]="getValueByScore(carryScore)"
+        [@progressAnimation]="{ value: '', params: { progressWidth: getProgressWidth(carryScore) } }">
+        <span>{{ carryScore.toFixed(1) }}</span>
+    </div>
+</div>
