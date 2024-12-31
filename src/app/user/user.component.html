@@ -38,10 +38,11 @@
                 </div>
                 <div class="queue">
                     <div>{{findQueue(match.queueId)?.description}}</div>
+                    <p>{{match.gameStartTimestamp | timeAgo}}</p>
                 </div>
                 <div class="url">
                     <a
-                        [routerLink]="['/match/' + match.matchId + '/' + match.currentPlayer?.puuid]">See
+                        [routerLink]="['/match/', match.matchId, match.currentPlayer?.puuid, match.currentPlayer?.gameName, match.currentPlayer?.tagLine, match.currentPlayer?.region]">See
                         Match</a>
                 </div>
             </div>

@@ -17,6 +17,7 @@
 
 .heroes {
     margin-top: 10px;
+    padding-right: 5px;
 }
 
 .hero {
@@ -104,6 +105,11 @@
     }
 }
 
+.duration {
+    opacity: 0.5;
+    margin-top: 5px;
+}
+
 .name {
     display: block;
     font-size: 12px;
@@ -112,8 +118,9 @@
     text-align: center;
     margin-top: 10px;
     max-width: 70px;
+    text-decoration: none;
     &.active {
-        color: rgb(0, 170, 255) !important;
+        color: rgb(255, 221, 0) !important;
         font-weight: bold;
     }
 }
@@ -125,6 +132,9 @@
             border-radius: 100%;
             border: 5px solid #090c11;
             height: 64px;
+            &.active {
+                border-color: rgb(255, 221, 0) !important;
+            }
         }
         .level {
             position: absolute;

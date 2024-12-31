@@ -3,6 +3,8 @@
     <div class="page">
         <p>Match details</p>
         <h1>{{findQueue(matchDetail.queueId)?.description}}</h1>
+        <p class="duration">{{matchDetail.gameStartTimestamp| duration:
+            matchDetail.gameEndTimestamp }}</p>
     </div>
     <div class="match">
         <div class="team">
@@ -19,16 +21,18 @@
                             alt="Role Icon">
                     </div>
                     <div>
-                        <a class="name">
-                            {{hero.summonerName}}
+                        <a [class.active]="hero.gameName == gameName"
+                            [routerLink]="['/match-history', hero.gameName, hero.tagLine, hero.region]"
+                            class="name">
+                            {{hero.gameName}}
                         </a>
                         <div class="avatar">
                             <div class="image">
-                                <img
+                                <img [class.active]="hero.gameName == gameName"
                                     [src]="'./assets/champion/' + hero.championName + '.png'"
                                     alt="Hero Avatar" />
                                 <div class="level">
-                                    <div>12</div>
+                                    <div>{{hero.champLevel}}</div>
                                 </div>
                             </div>
                         </div>
@@ -54,16 +58,19 @@
                             alt="Role Icon">
                     </div>
                     <div>
-                        <a class="name">
-                            {{hero.summonerName}}
+                        <a [class.active]="hero.gameName == gameName"
+                            [routerLink]="['/match-history', hero.gameName, hero.tagLine, hero.region]"
+                            class="name">
+                            {{hero.gameName}}
                         </a>
                         <div class="avatar">
                             <div class="image">
                                 <img
+                                    [class.active]="hero.gameName == gameName"
                                     [src]="'./assets/champion/' + hero.championName + '.png'"
                                     alt="Hero Avatar" />
                                 <div class="level">
-                                    <div>12</div>
+                                    <div>{{hero.champLevel}}</div>
                                 </div>
                             </div>
                         </div>

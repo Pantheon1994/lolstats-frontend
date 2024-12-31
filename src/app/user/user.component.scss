@@ -5,7 +5,6 @@
 .match-history {
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
 }
 
 .match-card {
@@ -114,6 +113,11 @@
 .queue {
     width: 100%;
     text-align: right;
+    p {
+        opacity: 0.5;
+        margin-top: 5px;
+        font-size: 12px;
+    }
 }
 
 a {
@@ -139,6 +143,7 @@ a {
     position: relative;
     margin-left: 10px;
     img {
+        border: 5px solid #090c11;
         width: 64px;
         height: 64px;
         border-radius: 50%;

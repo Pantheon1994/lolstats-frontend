@@ -1,14 +1,16 @@
 <div class="background"></div>
 <div class="container">
-    <h1>Find a summoner</h1>
-    <p>Find the best player in your match</p>
+    <h1>Discover your Carry Score</h1>
+    <p>Enter your summoner name and see who really made the difference</p>
     <div class="form-search-bar">
-
         <div class="searchbar">
             <form (ngSubmit)="search()" class="form-container">
-                <input type="text" (ngModelChange)="updateQuery()"
+                <div *ngIf="isLoading" class="loader">
+                    <div class="spinner"></div>
+                </div>
+                <input type="text" *ngIf="!isLoading" (ngModelChange)="updateQuery()"
                     [(ngModel)]="gameName" name="searchQuery"
-                    placeholder="Search Yourself or another Summoner (Name#TagLine)" />
+                    placeholder="Search  (Name#TagLine)" />
                 <select [(ngModel)]="regionQuery" name="Region" id="cars">
                     <option *ngFor="let region of regions"
                         [value]="region">{{region}}</option>
@@ -18,9 +20,7 @@
                 Search
             </button>
         </div>
-        <div *ngIf="isLoading" class="loader">
-            <div class="spinner"></div>
-        </div>
+       
         <div *ngIf="showError" class="notification error">
             Can't find <b>{{gameName}}</b>
         </div>

@@ -34,6 +34,7 @@ export class HomeComponent {
   updateQuery() {
     this.showError = false;
   }
+  
 
   async search() {
     if (this.gameName.length == 0)

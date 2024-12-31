@@ -5,11 +5,13 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map, Observable, tap } from 'rxjs';
 import { ProgressionBarComponent } from "../progression-bar/progression-bar.component";
 import { queues } from '../constants';
+import { SeoService } from '../seo.service';
+import { TimeAgoPipe } from '../time-ago.pipe';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [NgFor, AsyncPipe, NgIf, ProgressionBarComponent, NgClass, RouterLink],
+  imports: [NgFor, AsyncPipe, NgIf, ProgressionBarComponent, NgClass, RouterLink, TimeAgoPipe],
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
@@ -21,13 +23,16 @@ export class UserComponent {
 
   matchHistory$: Observable<MatchScore[]> = new Observable();
 
-  constructor(private route: ActivatedRoute, private matchService: MatchService) { }
+  constructor(private route: ActivatedRoute, private matchService: MatchService, private seoService: SeoService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.gameName = params['gameName'];
       this.tagLine = params['tagLine'];
       this.region = params['region'];
+
+      this.seoService.updateTitle(`Recent Games ${this.gameName}#${this.tagLine}-${this.region} `);
+      this.seoService.updateDescription(`Recent Games  ${this.gameName}#${this.tagLine}-${this.region}`);
 
       this.average = 0;
       let totalScore = 0;

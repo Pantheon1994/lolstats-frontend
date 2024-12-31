@@ -11,6 +11,9 @@ export interface PlayerScore {
   isSummoner: boolean;
   position: Position;
   champLevel: number;
+  region: string;
+  tagLine: string;
+  gameName: string;
 }
 
 export interface MatchScore {
@@ -19,13 +22,13 @@ export interface MatchScore {
   queueId: number;
   matchId: string;
   winner: "RED" | "BLUE"
+  gameStartTimestamp: number;
+  gameEndTimestamp: number;
   currentPlayer?: PlayerScore;
   isWinner?: boolean;
 }
 
-export
-
-  type Position = "" | "Invalid" | "TOP" | "JUNGLE" | "MIDDLE" | "BOTTOM" | "UTILITY";
+export type Position = "" | "Invalid" | "TOP" | "JUNGLE" | "MIDDLE" | "BOTTOM" | "UTILITY";
 
 export enum Regions {
   BRAZIL = "BR1",

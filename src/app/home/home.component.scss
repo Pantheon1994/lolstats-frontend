@@ -56,6 +56,7 @@ select {
     margin: 5px;
     background: #0c1117;
     color: white;
+    font-size: 12Px;
     padding: 10px;
     &:hover {
         outline: none;
@@ -75,14 +76,16 @@ select {
 .loader {
     z-index: 1000;
     font-size: 20px;
-    margin-top: 10Px;
-    color: #3498db; /* Couleur du texte */
+    margin-top: 10px;
+    color: #0d161b;
+    width: 100%;
+    margin: 10px;
 }
 
 /* Style pour le spinner (cercle qui tourne) */
 .spinner {
     border: 4px solid #f3f3f3; /* Couleur de fond du spinner */
-    border-top: 4px solid #3498db; /* Couleur du spinner */
+    border-top: 4px solid #0d161b; /* Couleur du spinner */
     border-radius: 50%;
     width: 16px;
     height: 16px;
@@ -93,10 +96,10 @@ button {
     color: white;
     background: transparent;
     border: none;
-    margin-left: 20px;
     background: rgb(0, 145, 255);
     outline: none;
     padding-left: 10px;
+    font-size: 12px;
     padding-right: 10px;
     &:hover {
         cursor: pointer;
@@ -111,5 +114,19 @@ button {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 800px) {
+    .searchbar {
+        display: block;
+    }
+    button {
+        width: 100%;
+        height: 40px;
+    }
+    .form-search-bar {
+        max-width: 100%;
     }
 }

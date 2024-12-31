@@ -13,6 +13,9 @@
 .navbar-container {
     width: 1080px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
@@ -20,6 +23,12 @@
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+}
+
+
+img {
+    width: 25px;
+    margin-right: 10px;
 }
 
 .search-bar {
