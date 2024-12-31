@@ -24,7 +24,7 @@
                         <a [class.active]="hero.gameName == gameName"
                             [routerLink]="['/match-history', hero.gameName, hero.tagLine, hero.region]"
                             class="name">
-                            {{hero.gameName}}
+                            {{hero.gameName | gameNamePipe}}
                         </a>
                         <div class="avatar">
                             <div class="image">
@@ -61,7 +61,7 @@
                         <a [class.active]="hero.gameName == gameName"
                             [routerLink]="['/match-history', hero.gameName, hero.tagLine, hero.region]"
                             class="name">
-                            {{hero.gameName}}
+                            {{hero.gameName | gameNamePipe}}
                         </a>
                         <div class="avatar">
                             <div class="image">

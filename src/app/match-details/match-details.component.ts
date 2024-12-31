@@ -8,11 +8,12 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { queues } from '../constants';
 import { DurationPipe } from '../duration.pipe';
+import { GameNamePipe } from "../game-name.pipe";
 
 @Component({
   selector: 'app-match-details',
   standalone: true,
-  imports: [NgFor, NgIf, ProgressionBarComponent, AsyncPipe, RouterLink, DurationPipe],
+  imports: [NgFor, NgIf, ProgressionBarComponent, AsyncPipe, RouterLink, DurationPipe, GameNamePipe],
   templateUrl: './match-details.component.html',
   styleUrls: ['./match-details.component.scss'],
 })
